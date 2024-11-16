@@ -1,0 +1,304 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --main-color:#8e4585;
+    --plum-color:#dda0dd;
+    --gold-color:#FFD700;
+    --gold-color2:#D4AF37;
+    --white-color:#fff;
+    --black-color:#000;
+--box-shadow: rgb(0 0 0 / 16%) 0px 2px 8px;
+}
+@keyframes bounce1 {
+    0%, 100% {
+        transform: translateY(20px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes bounce2 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes bounce3 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 var(--gold-color), 0 0 0 0 var(--gold-color);
+  }
+
+  80% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0), 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20 var(--gold-color), 0 0 0 40 var(--gold-color);
+  }
+}
+body{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto; 
+  font-style: normal;
+    font-size: 16px;
+}
+
+.main-section{
+    display:flex;
+    height:100vh;
+    width:100%;
+    min-height: 100%;
+    min-width: 100%;
+}
+.desktop-program-container{
+    width: 385px;
+    min-width: 385px;
+    height: 100%;
+    min-height: 100%;
+    background: url("./images/wedding-program.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+ 
+.image-container{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100%;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    /* flex: 1; */
+}
+
+.program-navigator{
+    position: fixed;
+    top: 50px;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 80px;
+}
+.navigator-icon{
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+    justify-content: space-between;
+    gap: 0;
+    transition: all 0.3s ease;
+}
+.navigator-arrow{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid tomato; */
+    transition: all 0.3s ease;
+    transform: translateY(22px);
+}
+
+.navigator-arrow span:nth-child(1){
+    transform: translateY(22px);
+    animation: bounce1 1.5s infinite;
+}
+.navigator-arrow span:nth-child(2){
+    color: var(--gold-color);
+    animation: bounce2 1.5s infinite;
+    animation-delay: 0.1s;
+}
+.navigator-arrow span:nth-child(3){
+    animation: bounce3 1.5s infinite;
+
+}
+.navigator-text{
+    display: block;
+    transform: rotate(-90deg) translateX(-170px);
+    text-wrap: nowrap;
+    /* transform-origin: top left; */
+    /* transform: translateY(-40px); */
+    font-size: 18px;
+    font-weight: 700;
+}
+.navigator-text span{
+    color: var(--gold-color2);
+}
+.mobile-program-container{
+position: fixed; 
+top:100%;
+left: 0;
+width: 100%;
+height: 0%;
+z-index: 8;
+background: var(--gold-color);
+padding: 20px 38px;
+transition: all 0.3s ease;
+/* transition: all 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93); */
+/* transition: opacity 0.43s 0.6s, height 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93); */
+}
+.show-program{
+    top: 0;
+    height: 100%;
+    min-height: 100%;
+    opacity: 1;
+}
+.title{
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+ol li{
+    line-height: 1.4;
+}
+
+/* Animated Hamburger menu starts here */
+
+.hamburger {
+    width: 3.43rem;
+    height: 3.43rem;
+    background: var(--gold-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: var(--box-shadow);
+    
+/* transition: all 0.5s ease-in-out; */
+  animation: ripple 2s infinite;
+}
+
+.hamburger:hover .bars::before,
+.hamburger:hover .bars::after {
+    transition: transform 0.3s ease;
+}
+
+.hamburger:hover .bars::before {
+    transform: translateY(-0.62rem);
+}
+
+.hamburger:hover .bars::after {
+    transform: translateY(0.62rem);
+}
+
+.bars {
+    background: var(--white-color);
+    height: 0.18rem;
+    width: 60%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.4s ease;
+
+}
+
+.bars::before {
+    content: '';
+    width: 80%;
+    height: 0.18rem;
+    background: var(--white-color);
+    position: absolute;
+    transform: translateY(-0.5rem);
+
+}
+
+.bars::after {
+    content: '';
+    width: 80%;
+    height: 0.18rem;
+    background: var(--white-color);
+    position: absolute;
+    transform: translateY(0.5rem);
+}
+
+.crossburger {
+    background: var(--black-color);
+}
+
+.crossburger .bars {
+    background: transparent;
+    transform: rotate(180deg);
+}
+
+.crossburger .bars::before {
+    transform: translateY(0px) rotate(45deg) !important;
+}
+
+.crossburger .bars::after {
+    transform: translateY(0px) rotate(-45deg) !important;
+
+}
+
+/* Swiper implementation starts here */
+
+.custom-image-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(142, 69, 133,0.45);
+    /* z-index: 4; */
+}
+.swiper {
+    position: relative;
+    /* border: 2px solid red; */
+    width: 100%;
+  height: 100%;
+}
+.swiper img{
+    width: 100%;
+    height: 100%;
+}
+.swiper-container{
+    width: 100%;
+}
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Swiper implementation ends here */
+
+
+/* Animated Hamburger menu ends here */
+
+
+@media (min-width:1025px) {
+    .desktop-program-container{
+        display: block;
+    }
+    .mobile-program-container{
+
+    width: 385px;
+}
+.image-container{
+width: calc(100vw-385px);
+}
+}
