@@ -73,7 +73,8 @@ body{
     min-width: 385px;
     height: 100%;
     min-height: 100%;
-    background: url("./images/wedding-program.png");
+    background: var(--main-color);
+    /* background: url("./images/wedding-program.png"); */
     background-repeat: no-repeat; 
     background-position: center;
     background-size: cover;
