@@ -5,9 +5,15 @@
 }
 
 :root{
-    --main-color:#8e4585;
-    --plum-color:#dda0dd;
-    --gold-color:#FFD700;
+    /* Champagne gold: #F7E7CE */
+    /* Navy blue: #000080 */
+
+    --main-color:#000080;
+    /* --plum-color:#dda0dd; */
+    /* --main-color:#8e4585; */
+    /* --plum-color:#dda0dd; */
+    --gold-color:#F7E7CE;
+    /* --gold-color:#FFD700; */
     --gold-color2:#D4AF37;
     --white-color:#fff;
     --black-color:#000;
@@ -60,6 +66,24 @@ body{
   font-style: normal;
     font-size: 16px;
 }
+.updates-overlay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    position: fixed;
+    z-index: 20;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+  width: 100%;
+  height: 100%;  
+    font-size: 40px;
+    /* text-wrap: nowrap; */
+
+
+}
 
 .main-section{
     display:flex;
@@ -74,7 +98,7 @@ body{
     height: 100%;
     min-height: 100%;
     background: var(--main-color);
-    /* background: url("./images/wedding-program.png"); */
+    background: url("./images/wedding-program.jpg");
     background-repeat: no-repeat; 
     background-position: center;
     background-size: cover;
@@ -132,7 +156,6 @@ body{
 }
 .navigator-arrow span:nth-child(3){
     animation: bounce3 1.5s infinite;
-
 }
 .navigator-text{
     display: block;
