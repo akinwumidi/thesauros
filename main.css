@@ -80,7 +80,8 @@ body{
     font-weight: 700;
 }
 .btn-gold:hover{
-background: var(--main-color);
+background: transparent;
+border: 1px solid var(--gold-color2);
 }
 .btn-main{
     background: var(--main-color);
@@ -89,7 +90,8 @@ background: var(--main-color);
     font-weight: 700;
 }
 .btn-main:hover{
-    background: var(--gold-color2);
+    background: transparent;
+    border: 1px soliod var(--main-color);
 }
 .action-buttons-container{
     display: flex;
@@ -107,6 +109,11 @@ background: var(--main-color);
 
 .countdown-container {
     color: var(--gold-color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 15px;
 }
 .countdown-container span{
     color: var(--white-color);
