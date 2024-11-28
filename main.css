@@ -66,13 +66,36 @@ body{
   font-style: normal;
     font-size: 16px;
 }
+.couple-intro-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.countdown-container {
+    color: var(--gold-color2);
+}
+.countdown-container span{
+    color: var(--white-color);
+    font-weight: 600;
+}
+.couples-names{
+    display: block;
+    color: var(--white-color);
+    font-size: 45px;
+    text-align: center;
+    font-weight: 700;
+}
 .updates-overlay{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px;
-    position: fixed;
-    z-index: 20;
+    position: absolute;
+    z-index: 10;
     top:0;
     right:0;
     bottom: 0;
@@ -111,6 +134,7 @@ body{
     min-height: 100vh;
     min-height: 100%;
     overflow: hidden;
+    position: relative;
     /* border: 1px solid black; */
     /* flex: 1; */
 }

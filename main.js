@@ -44,7 +44,7 @@ var swiper = new Swiper(".mySwiper", {
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
       // Display the countdown
-      document.getElementById('countdown').innerHTML =`${days} D ${hours} H ${minutes} M ${seconds} S` ;
+      document.getElementById('countdown').innerHTML =`<span>${days}</span> D <span>${hours}</span> H <span>${minutes}</span> M <span>${seconds}</span> S` ;
 
       // If the countdown reaches zero, stop the interval and display a message
       if (timeLeft < 0) {
