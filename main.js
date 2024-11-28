@@ -1,16 +1,41 @@
 // Animated hamburger menu starts here
 
-let hamburgerdiv = document.querySelector(".hamburger")
-let programMenu = document.querySelector(".mobile-program-container")
+let hamburgerdiv = document.querySelector(".hamburger");
+let hamburgerdiv2 = document.querySelector(".closehamburger");
+let Showlocation = document.querySelector("#location");
+let Giftscontainer = document.querySelector(".gifts-container");
+let giftsMenu = document.querySelector("#gifts");
+let programMenu = document.querySelector(".mobile-program-container");
 
+// Unified toggle function
+function toggleVisibility(target) {
+    // Hide both containers first
+    programMenu.classList.remove('show-program');
+    Giftscontainer.classList.remove('show-program');
 
-
-function toggleClassName() {
-    hamburgerdiv.classList.toggle('crossburger')
-    programMenu.classList.toggle('show-program')
+    // Show the target container
+    if (target === 'programMenu') {
+        programMenu.classList.add('show-program');
+    } else if (target === 'Giftscontainer') {
+        Giftscontainer.classList.add('show-program');
+    }
+    else{
+        programMenu.classList.remove('show-program');
+    Giftscontainer.classList.remove('show-program');
+    }
 }
 
-hamburgerdiv.addEventListener("click", toggleClassName)
+// Event listener to remove all and show `programMenu`
+function removeAllAndShowProgram() {
+    toggleVisibility('programMenu');
+    hamburgerdiv.classList.toggle('crossburger');
+}
+
+// Add event listeners
+hamburgerdiv2.addEventListener("click", () => removeAllAndShowProgram());
+Showlocation.addEventListener("click", () => toggleVisibility('programMenu'));
+giftsMenu.addEventListener("click", () => toggleVisibility('Giftscontainer'));
+
 // Animated hamburger menu ends here
 
 // Swiper implementation ends here
