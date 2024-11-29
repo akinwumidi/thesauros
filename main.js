@@ -1,7 +1,9 @@
 // Animated hamburger menu starts here
 
 let hamburgerdiv = document.querySelector(".hamburger");
-let hamburgerdiv2 = document.querySelector(".closehamburger");
+let navigator = document.querySelector(".program-navigator");
+let closehamburger = document.querySelector(".closehamburger");
+let hamburger2 = document.querySelector(".hamburger2");
 let Showlocation = document.querySelector("#location");
 let Giftscontainer = document.querySelector(".gifts-container");
 let giftsMenu = document.querySelector("#gifts");
@@ -16,8 +18,16 @@ function toggleVisibility(target) {
     // Show the target container
     if (target === 'programMenu') {
         programMenu.classList.add('show-program');
+        closehamburger.classList.toggle('show-closehamburger')
+    navigator.classList.toggle('hide-program-navigator')
+
+
     } else if (target === 'Giftscontainer') {
         Giftscontainer.classList.add('show-program');
+    closehamburger.classList.toggle('show-closehamburger')
+    navigator.classList.toggle('hide-program-navigator')
+
+
     }
     else{
         programMenu.classList.remove('show-program');
@@ -27,12 +37,15 @@ function toggleVisibility(target) {
 
 // Event listener to remove all and show `programMenu`
 function removeAllAndShowProgram() {
-    toggleVisibility('programMenu');
-    hamburgerdiv.classList.toggle('crossburger');
+    programMenu.classList.remove('show-program');
+    Giftscontainer.classList.remove('show-program');
+    closehamburger.classList.toggle('show-closehamburger')
+    navigator.classList.toggle('hide-program-navigator')
 }
 
 // Add event listeners
-hamburgerdiv2.addEventListener("click", () => removeAllAndShowProgram());
+hamburgerdiv.addEventListener("click", () => toggleVisibility('programMenu'));
+hamburger2.addEventListener("click", () => removeAllAndShowProgram());
 Showlocation.addEventListener("click", () => toggleVisibility('programMenu'));
 giftsMenu.addEventListener("click", () => toggleVisibility('Giftscontainer'));
 

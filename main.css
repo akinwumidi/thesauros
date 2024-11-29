@@ -188,6 +188,9 @@ border: 1px solid var(--gold-color2);
     height: 100%;
     width: 80px;
 }
+.hide-program-navigator{
+    display: none;
+}
 .navigator-icon{
     color: var(--white-color);
     display: flex;
@@ -271,7 +274,7 @@ ol li{
 
 /* Animated Hamburger menu starts here */
 
-.hamburger {
+.hamburger,.hamburger2 {
     width: 3.43rem;
     height: 3.43rem;
     background: var(--gold-color);
@@ -288,7 +291,9 @@ ol li{
 }
 
 .hamburger:hover .bars::before,
-.hamburger:hover .bars::after {
+.hamburger:hover .bars::after 
+
+{
     transition: transform 0.3s ease;
 }
 
@@ -330,22 +335,42 @@ ol li{
     transform: translateY(0.5rem);
 }
 
-.crossburger {
+.crossburger,.hamburger2 {
     background: var(--black-color);
 }
 
-.crossburger .bars {
+.crossburger .bars,.hamburger2 .bars {
     background: transparent;
     transform: rotate(180deg);
 }
 
-.crossburger .bars::before {
+.crossburger .bars::before, .hamburger2 .bars::before {
     transform: translateY(0px) rotate(45deg) !important;
 }
 
-.crossburger .bars::after {
+.crossburger .bars::after, .hamburger2 .bars::after {
     transform: translateY(0px) rotate(-45deg) !important;
 
+}
+
+
+.closehamburger{
+    /* border: 3px solid white; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 33;
+    display: none;
+    gap: 15px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 20px;
+    padding-top: 50px;
+}
+.show-closehamburger{
+    display: flex;
 }
 
 /* Swiper implementation starts here */
