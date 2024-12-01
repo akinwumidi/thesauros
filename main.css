@@ -243,6 +243,7 @@ z-index: 22;
 background: var(--main-color);
 padding: 20px 38px;
 transition: all 0.3s ease;
+/* color: var(--white-color); */
 } 
 .mobile-program-container{
 position: fixed; 
@@ -423,3 +424,78 @@ ol li{
 width: calc(100vw-385px);
 }
 }
+
+/* Copy Bank details implementation */
+
+
+
+
+ .cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            width: 100%;
+            /* max-width: 600px; */
+            /* padding: 20px; */
+            /* border: 1px solid #ddd; */
+            border-radius: 8px;
+            /* background-color: #fff; */
+        }
+
+        .card {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fafafa;
+            position: relative;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .card pre {
+            margin: 0 0 10px;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+
+        .copy-btn {
+            display: inline-block;
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .copy-notification {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #28a745;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            display: none;
+        }
+
+        .copy-notification.show {
+            display: block;
+        }

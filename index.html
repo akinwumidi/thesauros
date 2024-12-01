@@ -25,58 +25,115 @@
 
 <body>
     <main>
-       
+
         <section class="main-section">
             <div class="gifts-container">
                 <h2 class="title">GIFT OPTIONS</h2>
+                <div class="cards-container">
+                    <!-- Naira Card -->
+                    <div class="card">
+                        <h3>Naira</h3>
+                        <p id="naira-details">
+                Account Name: Glory and Dancharles
+                Account Number: 0100569359
+                Bank Name: Premium Trust Bank
+                            </p>
+                        <button class="copy-btn" onclick="copyDetails('naira-details', this)">Copy</button>
+
+                        <div class="copy-notification">Copied!</div>
+                    </div>
+
+                    <!-- USD Card -->
+                    <div class="card">
+                        <h3>USD</h3>
+                        <p id="usd-details">
+                Account Name: Dancharles Okoto
+                Account Number: 8398123211
+                ACH Routing: 026073150
+                Account Type: checking
+                Bank Name: Community Federal Savings Bank
+                Bank Address: 89-16 Jamaica Ave, Woodhaven, NY 11421, USA
+                            </p>
+                        <button class="copy-btn" onclick="copyDetails('usd-details', this)">Copy</button>
+                        <div class="copy-notification">Copied!</div>
+                    </div>
+
+                    <!-- Euro and British Pounds Card -->
+                    <div class="card">
+                        <h3>Euro and British Pounds</h3>
+                        <p id="euro-details">
+                Account Name: Dancharles Okoto
+                Account Number: 65827337
+                Sort Code: 041307
+                Swift Code: CLJUGB21XXX
+                IBAN: GB63CLJU04130765827337
+                Bank Name: Clear Junction Limited
+                Bank Address: 4th Floor Imperial House, 15 Kingsway, London, United Kingdom, WC2B 6UN
+                            </p>
+                        <button class="copy-btn" onclick="copyDetails('euro-details', this)">Copy</button>
+                        <div class="copy-notification">Copied!</div>
+                    </div>
+
+                    <!-- Crypto Card -->
+                    <div class="card">
+                        <h3>Crypto</h3>
+                        <p id="crypto-details">
+                ERC20 and BEP20 Tokens: 0xa5f81Ea241443EB231f226f28033A54dFace0352
+                TRC20 Tokens: TAf3LxMd9H9ZBJJ5FSrtj5f66tw5kcL1iQ
+                Solana Tokens: 9pMH19dPjPdYHNM4DK95UBRzGpgk4D9EvYmuz9YRydYr
+                            </p>
+                        <button class="copy-btn" onclick="copyDetails('crypto-details', this)">Copy</button>
+                        <div class="copy-notification">Copied!</div>
+                    </div>
+                </div>
             </div>
             <div class="closehamburger">
                 <div class="close-program-navigator">
-                                     <!-- Animated hamburger menu starts here -->
-                                    <div class="hamburger2 ">
-                                        <div class="bars"></div>
-                                         <!-- Animated hamburger menu ends here -->
-                                    </div>
-                                    <div class="navigator-icon">
-                                        <div class="navigator-arrow">
-                                            <span><i class="ri-arrow-up-double-fill"></i></span>
-                                            <span><i class="ri-arrow-up-double-fill"></i></span>
-                                            <span><i class="ri-arrow-up-line"></i></span>
-                                        </div>
-                                    </div>
-                                </div> 
+                    <!-- Animated hamburger menu starts here -->
+                    <div class="hamburger2 ">
+                        <div class="bars"></div>
+                        <!-- Animated hamburger menu ends here -->
+                    </div>
+                    <div class="navigator-icon">
+                        <div class="navigator-arrow">
+                            <span><i class="ri-arrow-up-double-fill"></i></span>
+                            <span><i class="ri-arrow-up-double-fill"></i></span>
+                            <span><i class="ri-arrow-up-line"></i></span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="mobile-program-container">
 
-                
+
                 <h2 class="title">PROGRAM</h2>
-            <ul>
-                <li><strong>Date:</strong> 21st December 2024</li>
-                <li><strong>Church Time:</strong> 11am Prompt</li>
-                <li>
-                    <strong>Reception:</strong> 12.30pm
-                    <ul>
-                        <li>Reception is strictly by Invitation</li>
-                        <li>Access Card is Required</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Church Address:</strong>
-                    <ul>
-                        <li>RCCG The King's House</li>
-                        <li>King's Dome, Beside FCMB, Redemption City of God, Ogun State</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Reception Venue:</strong>
-                    <ul>
-                        <li>Directorate of Christian Education (RCCGDCE)</li>
-                        <li>Sunday School House, near the Old Auditorium, opposite Pillar 1Q, Redemption Camp</li>
-                    </ul>
-                </li>
-                <li><strong>Color of the Day:</strong> Navy Blue and Champagne Gold</li>
-            </ul>
+                <ul>
+                    <li><strong>Date:</strong> 21st December 2024</li>
+                    <li><strong>Church Time:</strong> 11am Prompt</li>
+                    <li>
+                        <strong>Reception:</strong> 12.30pm
+                        <ul>
+                            <li>Reception is strictly by Invitation</li>
+                            <li>Access Card is Required</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Church Address:</strong>
+                        <ul>
+                            <li>RCCG The King's House</li>
+                            <li>King's Dome, Beside FCMB, Redemption City of God, Ogun State</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Reception Venue:</strong>
+                        <ul>
+                            <li>Directorate of Christian Education (RCCGDCE)</li>
+                            <li>Sunday School House, near the Old Auditorium, opposite Pillar 1Q, Redemption Camp</li>
+                        </ul>
+                    </li>
+                    <li><strong>Color of the Day:</strong> Navy Blue and Champagne Gold</li>
+                </ul>
 
             </div>
             <div class="desktop-program-container">
@@ -94,20 +151,20 @@
                         <div class="countdown-container">
                             <p id="countdown"></p>
                             <div class="action-buttons-container">
-                                 <button class="btn btn-main" id="location">Location</button>
-                        <button class="btn btn-gold" id="gifts">Send a gift</button>
+                                <button class="btn btn-main" id="location">Location</button>
+                                <button class="btn btn-gold" id="gifts">Send a gift</button>
                             </div>
-                       
+
                         </div>
-                        
+
                     </div>
                 </section>
-               <div class="program-navigator">
-                     <!-- Animated hamburger menu starts here -->
+                <div class="program-navigator">
+                    <!-- Animated hamburger menu starts here -->
                     <div class="hamburger ">
                         <div class="bars"></div>
-                         <!-- Animated hamburger menu ends here -->
-                    </div> 
+                        <!-- Animated hamburger menu ends here -->
+                    </div>
                     <div class="navigator-icon">
                         <div class="navigator-arrow">
                             <span><i class="ri-arrow-up-double-fill"></i></span>
